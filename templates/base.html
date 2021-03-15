@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	content="width=device-width,
+	initial-scale=1.0">
+	<title>Vladislav Ruskovoloshin</title>
+	<link rel="stylesheet" href="{% static 'styles.css' %}">
+	<style>
+	.container {
+		width: 100%;
+		height: 100vh;
+		background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url({% static 'space4.jpg' %});
+		background-position:center;
+		background-size:cover;
+		padding-left: 9%;
+		padding-right: 9%;
+		box-sizing: border-box;
+	}
+	
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="navbar">
+			<nav>
+				<ul>
+					<li><a href="{% url 'home:main' %}">HOME</a></li>
+					<li><a href="{% url 'game:start' %}">GAME</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+		{% block content %}
+		{% endblock content %}
+	</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+	{% block content %}
+		<link rel="stylesheet" href="{% static 'game/styles.css' %}">
+		<div class="gameContainer">
+			<canvas width="800" height="600" id="canvas"></canvas>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src={% static 'game/spaceGame.js' %}></script>
+	{% endblock content %}
